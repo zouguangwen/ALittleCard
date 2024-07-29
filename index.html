@@ -85,6 +85,7 @@
     </style>
 </head>
 <body>
+    <audio id="backgroundMusic" src="bgm.mp3" loop autoplay></audio>
     <canvas id="canvas"></canvas>
 
     <div class="background"></div>
@@ -104,6 +105,10 @@
     </div>
 
     <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('backgroundMusic');
+            audio.volume = 0.1; // 设置音量为50%
+        });
         // 初始化变量
         let canvas = document.getElementById('canvas'),
             ctx = canvas.getContext('2d'),
